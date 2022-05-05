@@ -11,16 +11,17 @@ print(file.head(),
 file.columns,
 file.describe())
 
-"""for nombre_columna in file.columns:
+for nombre_columna in file.columns:
     if nombre_columna!="Address":
         sns.boxplot(x=file[nombre_columna])
         plt.show()
     else:
-        pass"""
+        pass
 
 
 file2=file.dropna()
 file2=file2.drop(["Address"],axis=1)
+
 #normalizacion del file2
 file2_norm=(file2-file2.min())/(file2.max()-file2.min())
 print(file2_norm.describe())
@@ -60,3 +61,4 @@ colores=np.array(["blue","green","yellow","red"])
 a.scatter(x=pca_file2_df.Componente1,y=pca_file2_df.Componente2,c=colores[pca_file2_df.CLUSTERS],s=50)
 plt.show()
 #parece que se han formado bien ya que no hay practicamente mezclas entre colores
+

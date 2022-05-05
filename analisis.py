@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 sns.lmplot(y="Price", x ="Avg. Area House Age",data=file2)
 plt.show()
-#segun la grafica a medida que aumenta la edad de las casas, su precio aumenta lo que me parece bastante interesante ya que eso significa que el area de las casas esta cogiendo valos con el tiempo
+#segun la grafica a medida que aumenta la edad de las casas, su precio aumenta lo que me parece bastante interesante ya que eso significa que el area de las casas esta cogiendo valor con el tiempo
 sns.lmplot(y="Avg. Area Income",x="Avg. Area House Age",data=file2)
 plt.show()
 #segun la grafica a medida que aumenta la edad de las areas, los ingresos de las areas disminuyen muy levemente ,por tanto no hay ninguna relacion entre edad de las areas e ingresos del area, es decir no se influyen entre ellos(que aumente la edad del area no quiere decir que obtengas ni mas ni menos ingresos por el area)
