@@ -11,16 +11,13 @@ print(file.head(),
 file.columns,
 file.describe())
 
-for nombre_columna in file.columns:
-    if nombre_columna!="Address":
-        sns.boxplot(x=file[nombre_columna])
-        plt.show()
-    else:
-        pass
-
-
 file2=file.dropna()
 file2=file2.drop(["Address"],axis=1)
+print(file2.columns)
+
+for nombre_columna in file2.columns:
+    sns.boxplot(x=file[nombre_columna])
+    plt.show()
 
 #normalizacion del file2
 file2_norm=(file2-file2.min())/(file2.max()-file2.min())
